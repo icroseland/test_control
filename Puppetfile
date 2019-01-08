@@ -9,3 +9,6 @@ mod 'theforeman/foreman',
 mod 'puppetlabs/apt',
 mod 'puppetlabs/postgresql',
 mod 'puppet/selinux',
+
+mod 'puppet_master'
+    :git => 'git@github.com:icroseland/puppet_master.git'
