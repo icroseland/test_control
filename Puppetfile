@@ -14,10 +14,10 @@ gitbase = 'git@github.com:icroseland/'
 gitext = '.git'
 
 mod "puppet_master",
-    :git => gitbase + "puppet_master" + gitext,
-    :branch => :control_branch,
+    :git => gitbase + "puppet_master" + gitext
+    :branch => :control_branch
     :default_branch => 'master'
 mod "proof_module",
-    :git => gitbase + "proof_module" gitext,
-    :branch => :control_branch,
+    :git => gitbase + "proof_module" gitext
+    :branch => :control_branch
     :default_branch => 'master'
