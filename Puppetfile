@@ -15,7 +15,3 @@ mod "puppet_master",
     :git => 'git@github.com:icroseland/puppet_master.git',
     :branch => :control_branch,
     :default_branch => 'master'
-mod "proof_module",
-    :git => 'git@github.com:icroseland/proof_module.git',
-    :branch => :control_branch,
-    :default_branch => 'master'
