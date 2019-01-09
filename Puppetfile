@@ -10,7 +10,7 @@ mod 'puppetlabs/postgresql', :latest
 mod 'puppet/selinux', :latest
 # not forge modules
 hostname = `hostname`
-gitbase = 'git@vcs.stsky.biz:puppet/'
+gitbase = 'git@github.com:icroseland/'
 gitext = '.git'
 
 mod "puppet_master",
@@ -18,6 +18,6 @@ mod "puppet_master",
     :branch => :control_branch,
     :default_branch => 'master'
 mod "proof_module",
-    :git => 'git@vcs.stsky.biz:iroseland/proof_module.git',
+    :git => gitbase + "proof_module" gitext,
     :branch => :control_branch,
     :default_branch => 'master'
