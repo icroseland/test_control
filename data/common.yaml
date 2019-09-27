@@ -41,3 +41,5 @@ puppet_master::r10k_remote:
     remote: 'git@github.com:icroseland/product.git'
     basedir: '/etc/puppetlabs/code/environments'
     prefix: 'product'
+
+puppet_master::mom_name: 'puppet.local'
