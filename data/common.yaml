@@ -45,3 +45,4 @@ puppet_master::r10k_remote:
     prefix: 'product'
 
 puppet_master::mom_name: 'puppet.local'
+puppet_master::ca_server: 'puppet.local'
