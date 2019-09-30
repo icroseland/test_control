@@ -7,6 +7,8 @@ mod 'theforeman/foreman'
 mod 'puppetlabs/apt'
 mod 'puppetlabs/postgresql'
 mod 'puppet/selinux'
+mod 'camptocamp-systemd'
+
 # not forge modules
 gitbase = 'git@github.com:icroseland/'
 gitext = '.git'
