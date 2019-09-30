@@ -1,6 +1,4 @@
 ---
 classes:
-  - proof_module
   - puppet_master
-  - puppet_master::installer::setup_r10k
   
