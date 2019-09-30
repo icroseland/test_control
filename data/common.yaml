@@ -32,17 +32,16 @@ w0BMM0WRwhPfUKc5lCFzcAUX7Kn0xFDjZYZEgnsJXuHaTdJSlK7SPiLSiiPAZFKHo6keKeCmX06LxcPV
 Z/QWbrfG5AgsivWDi+gG6bQ7tRplg0U6NPNY/IRhWGvxo/xLHKWxa/e0RYVJ1Lr46MGYJE3rBW661gOECgm1xNwjJ8RGB+gSPNENWZB2mSMu9GUgeVf7kAx8oZVaDj
 yp
 '
-puppet_master::r10k_configured:
-  sources:
-    infrastructure:
-      remote: 'git@github.com:icroseland/test_control.git'
-      basedir: '/etc/puppetlabs/code/environments'
-      invalid_branches: 'correct'
-      prefix: 'infrastructure'
-    product:
-      remote: 'git@github.com:icroseland/product.git'
-      basedir: '/etc/puppetlabs/code/environments'
-      invalid_branches: 'correct'
-      prefix: 'product'
+puppet_master::r10k_remote:
+  infrastructure:
+    remote: 'git@github.com:icroseland/test_control.git'
+    basedir: '/etc/puppetlabs/code/environments'
+    invalid_branches: 'correct'
+    prefix: 'infrastructure'
+  product:
+    remote: 'git@github.com:icroseland/product.git'
+    basedir: '/etc/puppetlabs/code/environments'
+    invalid_branches: 'correct'
+    prefix: 'product'
 
 puppet_master::mom_name: 'puppet.local'
