@@ -8,6 +8,8 @@ mod 'puppetlabs/apt'
 mod 'puppetlabs/postgresql'
 mod 'puppet/selinux'
 mod 'camptocamp-systemd'
+mod 'puppetlabs-puppetdb'
+
 
 # not forge modules
 gitbase = 'git@github.com:icroseland/'
