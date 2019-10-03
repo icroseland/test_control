@@ -6,4 +6,4 @@ classes:
 
 puppet_master::autosign: true
 puppet_master::autosign_list:
-  - *.local
+  - "*.local"
