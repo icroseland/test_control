@@ -10,12 +10,12 @@ mod 'puppet/selinux'
 mod 'camptocamp-systemd'
 mod 'puppetlabs-puppetdb'
 #not forge
-mod "puppet_master",
-    :git => git@github.com:icroseland/puppet_master.git,
+mod 'puppet_master',
+    :git => 'git@github.com:icroseland/puppet_master.git',
     :branch => :control_branch,
     :default_branch => 'master'
-mod "service_users",
-    :git => git@github.com:icroseland/service_users.git,
+mod 'service_users',
+    :git => 'git@github.com:icroseland/service_users.git',
     :branch => :control_branch,
     :default_branch => 'master'
 
