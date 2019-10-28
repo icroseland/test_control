@@ -9,7 +9,7 @@ puppet_master::autosign: true
 puppet_master::autosign_entries:
   - "*.local"
 
-service_users::user_hash:
+manage_users::user_hash:
   testuser1:
     ensure: 'present'
     uid: '1001'
