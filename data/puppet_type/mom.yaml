@@ -12,8 +12,8 @@ puppet_master::autosign_entries:
 manage_users::user_hash:
   testuser1:
     ensure: 'present'
-    uid: '1001'
-    gid: '1001'
+    uid: '1100'
+    gid: '1100'
     group_array:
      - 'wheel'
     home: '/home/testuser1'
