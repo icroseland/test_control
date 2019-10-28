@@ -3,7 +3,7 @@ classes:
   - puppet_master
   - apache
   - puppet_master::configure_apache
-  - service_users
+  - manage_users
 
 puppet_master::autosign: true
 puppet_master::autosign_entries:
