@@ -18,7 +18,7 @@ service_users::user_hash:
      - 'wheel'
     home: '/home/testuser1'
     shell: '/bin/bash'
-    password: '$6$aKkvY.4p$xpRkbWkZ0rBwx51MgekuwTG..i2BEbTTOrGvc2WMSWeZstJ9rskGECJAdll6Vcb6iAzK1M5N0/va18h4h.Qnj1:18197:0:99999:7:::
+    password: '$6$aKkvY.4p$xpRkbWkZ0rBwx51MgekuwTG..i2BEbTTOrGvc2WMSWeZstJ9rskGECJAdll6Vcb6iAzK1M5N0/va18h4h.Qnj1:18197:0:99999:7:::'
     ssh_id_rsa_pub: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/Q7bgqR8jA3u55JpEZRGgkgkOXxGv08zAdEAqrNLzOuCNoqBAnD9QxTMALtse67BaZalr2VS6ON2C5N1V6mUM9Qw0BMM0WRwhPfUKc5lCFzcAUX7Kn0xFDjZYZEgnsJXuHaTdJSlK7SPiLSiiPAZFKHo6keKeCmX06LxcPVlfOk/7ewuwk2hwVoaKwkfSlTGQeOk8n6QP34vmhftptUNJZ/QWbrfG5AgsivWDi+gG6bQ7tRplg0U6NPNY/IRhWGvxo/xLHKWxa/e0RYVJ1Lr46MGYJE3rBW661gOECgm1xNwjJ8RGB+gSPNENWZB2mSMu9GUgeVf7kAx8oZVaDjyp'
     ssh_id_rsa:
     '-----BEGIN RSA PRIVATE KEY-----
