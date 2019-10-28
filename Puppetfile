@@ -19,3 +19,8 @@ mod "puppet_master",
     :git => 'git@github.com:icroseland/puppet_master.git',
     :branch => :control_branch,
     :default_branch => 'master'
+
+mod "service_users',
+    :git => 'git@github.com:icroseland/service_users.git',
+    :branch => :control_branch,
+    :default_branch => 'master'
