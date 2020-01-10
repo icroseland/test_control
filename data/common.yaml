@@ -46,3 +46,9 @@ puppet_master::r10k_remote:
 
 puppet_master::mom_name: 'puppet.local'
 puppet_master::ca_server: 'puppet.local'
+
+test_files::params::html_files:
+  'testfile1':
+    'puppet_type': 'master'
+  'testfile2':
+    'puppet_type': 'client'

@@ -4,6 +4,7 @@ classes:
   - apache
   - puppet_master::configure_apache
   - manage_users
+  - test_files
 
 puppet_master::autosign: true
 puppet_master::autosign_entries:
