@@ -9,6 +9,7 @@ mod 'puppetlabs/postgresql'
 mod 'puppet/selinux'
 mod 'camptocamp-systemd'
 mod 'puppetlabs-puppetdb'
+mod 'puppetlabs-haproxy', '4.2.0'
 #not forge
 mod 'puppet_master',
     :git => 'git@github.com:icroseland/puppet_master.git',
