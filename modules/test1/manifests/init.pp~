@@ -1,0 +1,11 @@
+##
+class test1{
+$user_p = 'testuser1'
+$password_p = 'testpassword'
+$database_p = 'pe-orchestrator'
+
+  pe_postgresql::server::db { $database_p:
+    user     => $user_p,
+    password => pe_postgresql_password($user_p, $password_p),
+  }
+}

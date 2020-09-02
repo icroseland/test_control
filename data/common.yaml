@@ -1,54 +1,36 @@
 ---
-id_rsa: '-----BEGIN RSA PRIVATE KEY-----
-MIIEogIBAAKCAQEAv0O24KkfIwN7ueSaRGURoJIJDl8Rr9PMwHRAKqzS8zrgjaKg
-QJw/UMUzAC7bHuuwWmWpa9lUujjdguTdVeplDPUMNATDNFkcIT31CnOZQhc3AFF+
-yp9MRQ42WGRIJ7CV7h2k3SUpSu0j4i0oojwGRSh6OpHingpl9Oi8XD1ZXzpP+3sL
-sJNocFaGisJH0pUxkHjpPJ+kD9+L5oX7abVDSWf0Fm63xuQILIr1g4voBum0O7Ua
-ZYNFOjTzWPyEYVhr8aP8SxylsWv3tEWFSdS6+OjBmCRN6wVuutYDhAoJtcTcIyfE
-RgfoEjzRDVmQdpkjLvRlIHlX+5AMfKGVWg48qQIDAQABAoIBAGALkvQyOS6N+z2Y
-LFeYIUfuzZln6CvRQgqK1gYYDz6RHF5DghGv5KOcw0WeQe6/ECn0zyUXV9LD54hp
-gTQ5plDhZSViFtxcuyF+SWTcM+PaYIZKZk89u0EaJ/QvN4SmykNuo3FhzeCQQOq9
-HqCJX+SutOJgi9otApH/pUb0j8KfWVaCo/NWRnjEmH6xKyR/7w6jx6RGQ9r02QNY
-IU6smbiOSa1NPxTM1Jp+zeXJPWP4eOPIJIO5/b/JOjeDGLq9urp8VC4lgDTh9dyt
-3y0ijJ5bq+vMObH6P7xtSzoBqX3Y1Hp+A90EMTCvy76pbAuFDWgBBa2WnxAicC0K
-bJ/k+eECgYEA5UK8WN1JOD3/cSYNqoCDGHC2QWgTEsc5HBepHBXMexZf716UXbL4
-ku5E3yi3AQhjY57sikFO79BhvmYUoRc3CcPv5RFyZLouvzsG77W1Xbdu8+1CwPGd
-XSMAd9lqENWaDHQUdAtWAPu48dETmqRcLWalzJOHuRQkjzt+NW4A510CgYEA1ZJ9
-LpYJsCJSt7YPCVbmlkfEmRzEotK/07Oow9TN+SZp/45mfdgl8Y23JCZY2kI7eep0
-VP4VnItcDSGZdc/oDtW7kZj1LSR2tzNgoBpu6YATxkweYoAeu4X3TuduvIAgtjyp
-QS1UnimoqY7n9LGa96Qh3s3JFpEoL0ypY+r7Ub0CgYBzjjyzKe6C+7TqSjzvKNFr
-GzyyIQwkFeiyQTbK4i3sCK4YT/rGc7QZEyIBvVromVrHVs5xLVPlSopJ1tglDjd+
-o5UiR7X6EWIIn27ymgstjozNRFS2PdKMpFzTC/ILRC7egg/hIemam0ZwFGsmMhwI
-AkoloGLzpbR7wYfu1GB+PQKBgBPH65xC/Ua5BxxI2n+s8tJ8dzMPPQ8voeDDxR/O
-N/2Zlzu6PrftKyaCT7IjcxtUAxo5oui0V+AV8EKvF/2XchDdru+/UQYLWIuDULHD
-gP5ThIFbT30kDLSlpdBDEziWTXFTkQGeZzX2+c4qlEVPpeDF7PUr7jIO47/tw8qj
-Wv+pAoGAc4rw+sHACAioSalQfklUM2iGL1hUDDuSWzkX9OQL7HbkgHZ+0HeDBU4U
-YpoDachOOP0uzb5sePG+1skb4SJQZGdmuLQzDeF3aYK+PnpMvOEHHPlmfYhjVCmd
-D0hGiqnD76Uv+qz1TyVrV/BkmAwqPgzIeY69AZ6j2vfg0+3BQnc=
------END RSA PRIVATE KEY-----
-'
-id_rsa.pub: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/Q7bgqR8jA3u55JpEZRGgkgkOXxGv08zAdEAqrNLzOuCNoqBAnD9QxTMALtse67BaZalr2VS6ON2C5N1V6mUM9Q
-w0BMM0WRwhPfUKc5lCFzcAUX7Kn0xFDjZYZEgnsJXuHaTdJSlK7SPiLSiiPAZFKHo6keKeCmX06LxcPVlfOk/7ewuwk2hwVoaKwkfSlTGQeOk8n6QP34vmhftptUNJ
-Z/QWbrfG5AgsivWDi+gG6bQ7tRplg0U6NPNY/IRhWGvxo/xLHKWxa/e0RYVJ1Lr46MGYJE3rBW661gOECgm1xNwjJ8RGB+gSPNENWZB2mSMu9GUgeVf7kAx8oZVaDj
-yp
-'
-puppet_master::r10k_remote:
-  infrastructure:
-    remote: 'git@github.com:icroseland/test_control.git'
-    basedir: '/etc/puppetlabs/code/environments'
-    invalid_branches: 'correct'
-    prefix: 'infrastructure'
-  product:
-    remote: 'git@github.com:icroseland/product.git'
-    basedir: '/etc/puppetlabs/code/environments'
-    invalid_branches: 'correct'
-    prefix: 'product'
+classes:
+  - testmod1
+  - arch
 
-puppet_master::mom_name: 'puppet.local'
-puppet_master::ca_server: 'puppet.local'
+package_inventory_enabled: true
+puppet_enterprise::puppet_master_host: 'old-master.local'
+puppet_enterprise::profile::agent::package_inventory_enabled: true
+puppet_enterprise::profile::database::additional_pg_hba_rules:
+  local_log_scrape_v4:
+    type: host
+    address: '127.0.0.1/32'
+    database: all
+    user: all
+    auth_method: md5
+  local_log_scrape_v6:
+    type: host
+    address: '::1/128'
+    database: all
+    user: all
+    auth_method: md5
+  very_local_log_scrape:
+    type: local
+    database: all
+    user: all
+    auth_method: md5
 
-test_files::params::html_files:
-  'testfile1':
-    'puppet_type': 'master'
-  'testfile2':
-    'puppet_type': 'client'
+
+log_scrape::token_p: '0C7fvuyF4fFZqA9KBPE7ZRXzaceUKzJvlh8243RE3ooY'
+log_scrape::cacert_path_p: '/etc/puppetlabs/puppet/ssl/certs/ca.pem'
+log_scrape::cert_path_p: '/etc/puppetlabs/puppet/ssl/certs/old-master.local.pem'
+log_scrape::key_path_p: '/etc/puppetlabs/puppet/ssl/private_keys/old-master.local.pem'
+log_scrape::api_url_p: 'https://old-master.local:8143/orchestrator/v1/jobs'
+log_scrape::syslog_fac_p: 'syslog.LOG_SYSLOG'
+log_scrape::position_file_p: '/tmp/data'
+log_scrape::python_path_p: '/usr/bin/python'

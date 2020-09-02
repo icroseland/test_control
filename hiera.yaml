@@ -7,17 +7,9 @@ defaults:
   # See https://puppet.com/docs/puppet/latest/environments_about.html for further details on environments.
   # datadir: data
   # data_hash: yaml_data
-
 hierarchy:
-  - name: "puppet infrastructure config"
-    path: "puppet_type/%{::puppet_type}.yaml"
   - name: "Per-node data (yaml version)"
     path: "nodes/%{::trusted.certname}.yaml"
-  - name: "collection, a group of hosts with a similar role, that work together"
-    path: "collection/${::collection_id}.yaml"
-  - name: "common host types/applications same as a role"
-    path: "roles/%{::role}.yaml"
-  - name: "test hiera"
-    path: "test/%{facts.testfact}.yaml"
-  - name: "Bottom Layer"
-    path: "common.yaml"
+  - name: "Other YAML hierarchy levels"
+    paths:
+      - "common.yaml"
